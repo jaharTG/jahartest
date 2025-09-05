@@ -13,11 +13,11 @@ Version3: includes multiplicative'''
 
 def calculator():
 
-    title =  str("This is a addition/subtraction/multiply calculator, please enter what you would like to add/subtract/multiply\n type done when you would like the result")
+    title =  str("This is a addition/subtraction/multiply/divide calculator, please enter what you would like to add/subtract/multiply/divide\n type done when you would like the result")
     
     print(title)
 
-    function = input("Add or Subtract or multiply (A/S/M) ?")
+    function = input("Add or Subtract or multiply (A/S/M/D) ?")
     if str(function) == "A" or str(function) == "a":
      value = input("What would you like to add ? ")
      value_total = 0
@@ -52,6 +52,19 @@ def calculator():
 
          value_total = value_total*float(value)
          value = input("What would you like to multiply ? ")
+
+
+     print("Your result is = ", value_total)
+
+    elif str(function) == "D" or str(function) == "d":
+     first_value = input("What is the value you want to Divide from ? ")
+     value = input("What would you like to multiply ? ")
+     value_total = float(first_value)
+
+     while str(value) != "done":
+
+         value_total = value_total/float(value)
+         value = input("What would you like to divide ? ")
 
 
      print("Your result is = ", value_total)
